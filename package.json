@@ -2,7 +2,7 @@
   "name": "slim-moms",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://olhapetrenko.github.io/slimmoms/",
+  "homepage": " https://olhapetrenko.github.io/slim/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.3",

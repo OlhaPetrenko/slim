@@ -1,0 +1,275 @@
+@import '../../common.scss';
+// @import '../../shared/styles/index';
+
+.form {
+  display: flex;
+
+  @include media-query(mobile) {
+    flex-direction: column;
+    // width: 240px;
+    gap: 32px;
+  }
+  @include media-query(tablet) {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    margin-left: 0;
+  }
+  @include media-query(desktop) {
+    margin-top: 90px;
+  }
+}
+.helper {
+  display: flex;
+  @include media-query(mobile) {
+    flex-direction: column;
+    max-width: 350px;
+    gap: 32px;
+  }
+  @include media-query(tablet) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    margin-left: 0;
+    gap: 40px;
+  }
+  @include media-query(desktop) {
+  }
+}
+
+.radioText {
+  //   font-family: 'Verdana';
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  color: $color-secondary;
+  margin: 0;
+
+  @include media-query(mobile) {
+    padding-bottom: 8px;
+  }
+  @include media-query(tablet) {
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    padding-bottom: 22px;
+    margin-bottom: 13px;
+  }
+  @include media-query(desktop) {
+  }
+}
+
+.radioGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnActiveLeft {
+  font-family: 'Verdana';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  padding: 13px 25px;
+  margin-top: 20px;
+  width: 210px;
+  color: $color-accent;
+
+  background-color: $bg-color-primary;
+  border: 2px solid $color-accent;
+  border-radius: 30px;
+
+  @include media-query(mobile) {
+    display: none;
+  }
+  @include media-query(tablet) {
+    display: block;
+  }
+  @include media-query(desktop) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bg-color-primary;
+    background-color: $color-accent;
+    box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+    scale: 1.05;
+    transition: 500ms;
+  }
+}
+
+.btnActiveRight {
+  font-family: 'Verdana';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 210px;
+  color: $color-accent;
+
+  background-color: $bg-color-primary;
+  border: 2px solid $color-accent;
+  border-radius: 30px;
+
+  @include media-query(mobile) {
+    padding: 13px 25px;
+    margin-top: 20px;
+    margin-bottom: 54px;
+    display: block;
+    margin-left: 30px;
+  }
+  @include media-query(tablet) {
+    display: none;
+  }
+  @include media-query(desktop) {
+    display: block;
+    margin-top: 89px;
+    margin-bottom: 30px;
+    // margin-bottom: 111px;
+    margin-right: -40px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bg-color-primary;
+    background-color: $color-accent;
+    box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+    scale: 1.05;
+    transition: 500ms;
+  }
+}
+
+// ======================================
+// Радиокнопки
+.radioInput {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radioSpan {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  color: $color-secondary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+}
+
+.radioSpan::before {
+  content: '';
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid $color-secondary;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.radioLabel > .radioInput:focus + .radioSpan::before {
+  box-shadow: 0 0 0 0.2rem rgba(252, 132, 45, 0.25);
+}
+
+.radioLabel > .radioInput:checked + .radioSpan::before {
+  //   border-color: $color-accent;
+  background-image: url('../../shared/images/mainPage/Ellipse\ 2.svg');
+}
+.radioLabel > .radioInput:focus + .radioSpan {
+  color: $color-accent;
+}
+
+// ===================form
+.formItem {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+}
+
+.formInput {
+  width: 100%;
+  border: transparent;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  outline: transparent;
+
+  @include media-query(mobile) {
+    min-width: 240px;
+    padding-bottom: 8px;
+  }
+  @include media-query(tablet) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    width: 240px;
+    margin-left: 0;
+  }
+}
+
+.formLabel {
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 0.5s;
+  //   font-family: 'Verdana';
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  color: $color-secondary;
+}
+
+.formInput:focus ~ .formLabel,
+.formInput:not(:focus):valid ~ .formLabel {
+  top: -20px;
+  font-size: 10px;
+  color: $color-accent;
+}
+.title {
+  @include media-query(mobile) {
+    margin-bottom: 32px;
+    width: 280px;
+    padding-top: 15px;
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.44;
+  }
+  @include media-query(tablet) {
+    margin-bottom: 68px;
+    width: 500px;
+    padding-top: 50px;
+
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.2;
+  }
+  @include media-query(desktop) {
+    margin-bottom: 68px;
+    width: 608px;
+    padding-top: 35px;
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.2;
+  }
+}

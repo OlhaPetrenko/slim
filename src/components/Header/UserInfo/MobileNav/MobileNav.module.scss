@@ -1,0 +1,89 @@
+@import 'shared/styles';
+
+.mobileNav {
+  display: flex;
+  justify-content: center;
+  @include media-query(mobile-only) {
+    background-color: #eff1f3;
+    position: absolute;
+    align-content: center;
+    bottom: -59px;
+    right: 0px;
+    width: 100vw;
+    z-index: 99;
+    padding-right: 20px;
+  }
+  @include media-query(tablet) {
+    background-color: transparent;
+    margin-left: auto;
+    position: static;
+    top: -78px;
+  }
+  @include media-query(desktop) {
+    margin-left: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  &Info {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include media-query(tablet) {
+      gap: 15px;
+    }
+  }
+  &Name {
+    display: inline;
+    @extend %title-gonhamProBold;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 13px;
+    letter-spacing: 0.04em;
+    padding: 10px 16px 10px 0;
+    @include media-query(mobile) {
+      border-right: 2px solid rgb(224, 224, 224);
+    }
+    @include media-query(tablet) {
+      margin: 0;
+      padding: 10px 15px 10px 0;
+    }
+    @include media-query(desktop) {
+      padding: 10px 20px 10px 0;
+      z-index: 99;
+    }
+  }
+}
+
+.btnLogout {
+  @extend %title-gonhamProBold;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: 0.04em;
+  color: rgb(155, 159, 170);
+  border: none;
+  background-color: transparent;
+  padding: 15px 0px 13px 0;
+  cursor: pointer;
+  @include media-query(tablet) {
+    margin: 0;
+    padding: 10px 15px 10px 0;
+  }
+  @include media-query(desktop) {
+    padding: 10px 20px 10px 0;
+    margin: 0;
+    z-index: 99;
+  }
+}
+
+// .btnBack {
+//   background-color: transparent;
+//   padding: 4px 10px 0px 15px;
+//   cursor: pointer;
+//   z-index: 30;
+//   @include media-query(tablet) {
+//     display: none;
+//     visibility: hidden;
+//   }
+// }

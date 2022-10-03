@@ -1,0 +1,123 @@
+@import '../../common.scss';
+
+.section {
+  background-color: $bg-color-secondary;
+  padding-bottom: 0;
+}
+
+.summary {
+  background-color: $bg-color-secondary;
+
+  @include media-query(tablet) {
+    // padding-bottom: 495px;
+
+    background-image: url(../../shared/images/DiaryPage/Layer_md_1x.png);
+
+    @include media-query(retina) {
+      background-image: url(../../shared/images/DiaryPage/Layer_md_2x.png);
+    }
+    background-size: 368px 327px;
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 0;
+  }
+  @include media-query(desktop) {
+    // padding-top: 306px;
+    // padding-bottom: 255px;
+
+    background-image: url(../../shared/images/DiaryPage/Layer_lg_1x.png);
+
+    @include media-query(retina) {
+      background-image: url(../../shared/images/DiaryPage/Layer_lg_2x.png);
+    }
+    background-size: 505px 816px;
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 0;
+
+    @include media-query(desktop) {
+      position: fixed;
+      width: 517px;
+      height: 100%;
+      top: 0px;
+      right: 0px;
+      // z-index: 1;
+    }
+  }
+  .summary_contant {
+    @include media-query(tablet) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 48px;
+    }
+    @include media-query(desktop) {
+      display: inline-block;
+      padding-left: 94px;
+      margin-top: 0px;
+      padding: 257px 107px 193px 94px;
+    }
+  }
+  .summary_table {
+    padding-top: 40px;
+
+    @include media-query(tablet) {
+      padding-top: 80px;
+      max-width: 288px;
+      padding-bottom: 80px;
+    }
+    @include media-query(desktop) {
+      margin-bottom: 60px;
+      padding-top: 0px;
+      max-width: 288px;
+      padding-bottom: 0px;
+    }
+  }
+  .summary_title {
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.04em;
+    color: $color-primary;
+    margin-bottom: 20px;
+
+    @include media-query(tablet) {
+      // padding-top: 80px;
+    }
+    @include media-query(desktop) {
+      padding-top: 0px;
+    }
+  }
+
+  .summary_text {
+    color: #9b9faa;
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.04em;
+    width: 100%;
+  }
+
+  .summary_recommendation {
+    padding-top: 40px;
+
+    @include media-query(tablet-only) {
+      padding-top: 80px;
+      padding-right: 80px;
+
+      max-width: 288px;
+    }
+
+    @include media-query(desktop) {
+      max-width: 288px;
+      padding-top: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+.summary_column {
+  @include media-query(tablet) {
+    width: 182px;
+  }
+}

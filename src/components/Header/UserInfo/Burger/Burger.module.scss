@@ -1,0 +1,22 @@
+@import 'shared/styles/';
+
+.burger {
+  display: flex;
+  background-image: url(../../../../shared/images/logo/mobile-burger.svg);
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  @include media-query(tablet) {
+    margin-left: 53px;
+  }
+}
+.close {
+  display: flex;
+  background-image: url(../../../../shared/images/close.svg);
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  @include media-query(tablet) {
+    margin-left: 53px;
+  }
+}

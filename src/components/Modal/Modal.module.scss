@@ -1,0 +1,65 @@
+@import '../../common.scss';
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(33, 33, 33, 0.12);
+  @include media-query(mobile-only) {
+    top: 80px;
+  }
+}
+
+.modal {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px 20px 120px;
+  @include media-query(mobile-only) {
+    position: absolute;
+    top: 40px;
+
+    width: 100%;
+    height: 100vh;
+  }
+
+  @include media-query(tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 64px 81px 81px 82px;
+  }
+}
+
+.close {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  @include media-query(mobile-only) {
+    top: -22px;
+    left: 20px;
+  }
+  background-color: transparent;
+  background-image: url('../../shared/images/arrow.svg');
+  @include media-query(tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    fill: #000;
+
+    cursor: pointer;
+    background-image: url('../../shared/images/close.svg');
+    background-position: center;
+  }
+}

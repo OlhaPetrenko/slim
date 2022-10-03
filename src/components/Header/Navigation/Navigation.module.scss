@@ -1,0 +1,35 @@
+@import 'shared/styles/';
+
+.headerNav {
+  &Container {
+    display: flex;
+    gap: 16px;
+  }
+  &Link {
+    @extend %title-gonhamProBold;
+    color: $font-color-form;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 0.93;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    &.active {
+      transition: 0.8s;
+      color: $color-primary;
+    }
+    &:hover {
+      transition: 0.8s;
+      scale: 1.1;
+      color: $color-primary;
+    }
+    @include media-query(tablet) {
+      display: flex;
+      padding: 10px 0;
+    }
+    @include media-query(desktop) {
+      padding: 10px 0;
+    }
+  }
+}

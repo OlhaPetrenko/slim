@@ -1,0 +1,30 @@
+$color-primary: #212121;
+$bg-color-primary: #ffffff;
+$color-secondary: #9b9faa;
+$bg-color-secondary: #f0f1f3;
+$color-accent: #fc842d;
+$color-secondary-accent: #264061;
+$style-color-form: #e0e0e0;
+// повторюється
+$font-color-form: #9b9faa;
+// $color-gradient: rgba(17, 21, 24, 0.902);
+$mobile: 320px;
+$responsive: 480px;
+$tablet: 768px;
+$desktop: 1280px;
+$transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+%title-verdana {
+  font-family: 'Verdana';
+}
+
+%title-verdana-bold {
+  font-family: 'VerdanaBold';
+}
+%title-gonhamProBold {
+  font-family: 'GothamProBold';
+}
+
+%title-gothamProLight {
+  font-family: 'GothamProLight';
+}

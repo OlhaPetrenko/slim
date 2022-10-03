@@ -1,0 +1,68 @@
+@import '../../common.scss';
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  @include media-query(mobile) {
+    padding-top: 0px;
+  }
+  @include media-query(tablet) {
+    padding-top: 50px;
+  }
+}
+
+.DatePicker {
+  border: none;
+  margin-top: 40px;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  color: $color-primary;
+  background-image: url(../../shared/images/DiaryPage/calendar.png);
+  background-size: 18px 20px;
+  background-repeat: no-repeat;
+  background-position: 137px;
+
+  @include media-query(mobile) {
+    margin-top: 30px;
+  }
+
+  @include media-query(tablet) {
+    margin-top: 0px;
+    font-size: 34px;
+    line-height: 1.21;
+    background-position: 240px;
+  }
+
+  @include media-query(desktop) {
+    margin-top: 0px;
+  }
+}
+
+.btn {
+  @include media-query(mobile-only) {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: $bg-color-primary;
+    color: $color-accent;
+    border: 2px solid $color-accent;
+    width: 48px;
+    height: 48px;
+
+    background-image: url(../../shared/images/DiaryPage/cross1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 15px;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+      box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+      background-image: url(../../shared/images/DiaryPage/cross.svg);
+    }
+  }
+}

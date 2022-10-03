@@ -1,0 +1,40 @@
+@import '../../shared/styles/index';
+
+.section {
+  @include media-query(tablet) {
+    // padding-top: 413px;
+    padding-bottom: 400px;
+
+    background-image: url(../../shared/images/mainPage/strawberry_md.png),
+      url(../../shared/images/mainPage/banana_md.png),
+      url(../../shared/images/mainPage/leaves_md.png),
+      url(../../shared/images/mainPage/vector_md.svg);
+
+    @include media-query(retina) {
+      background-image: url(../../shared/images/mainPage/strawberry_md@2x.png),
+        url(../../shared/images/mainPage/banana_md@2x.png),
+        url(../../shared/images/mainPage/leaves_md@2x.png),
+        url(../../shared/images/mainPage/vector_md.svg);
+    }
+    background-size: 308px 303px, 493px 432px, 601px 532px, 570px 566px;
+    background-repeat: no-repeat;
+    background-position: bottom 185px right 35px, bottom 0 right 0,
+      bottom 0 left 0, bottom 0 right 0;
+  }
+  @include media-query(desktop) {
+    margin-top: -270px;
+    padding-top: 300px;
+    padding-bottom: 0px;
+
+    background-image: url(../../shared/images/loginRegistrForm/group_lg.png),
+      url(../../shared/images/loginRegistrForm/vector_lg.svg);
+
+    @include media-query(retina) {
+      background-image: url(../../shared/images/loginRegistrForm/group_lg@2x.png),
+        url(../../shared/images/loginRegistrForm/vector_lg.svg);
+    }
+    background-size: 980px 860px, 602px 920px;
+    background-repeat: no-repeat;
+    background-position: top 0 right 0;
+  }
+}

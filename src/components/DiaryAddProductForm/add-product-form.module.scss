@@ -1,0 +1,165 @@
+@import '../../common.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  // gap: 32px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+
+  @include media-query(tablet) {
+    display: inline-block;
+    margin-top: 0px;
+  }
+}
+
+.input1 {
+  border: none;
+  border-bottom: 1px solid $style-color-form;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  color: $font-color-form;
+  width: 280px;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+
+  outline: transparent;
+
+  @include media-query(tablet) {
+    width: 240px;
+    margin-right: 22px;
+    margin-bottom: 0px;
+  }
+}
+
+.input2 {
+  border: none;
+  border-bottom: 1px solid $style-color-form;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  color: $font-color-form;
+  width: 280px;
+  padding-bottom: 8px;
+
+  outline: transparent;
+
+  @include media-query(tablet) {
+    text-align: right;
+    margin-right: 60px;
+    width: 107px;
+  }
+}
+
+.btn1 {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.21;
+  font-weight: 700;
+  padding: 13px 46px;
+
+  width: 176px;
+  height: 44px;
+  align-items: center;
+  margin: auto;
+  margin-top: 60px;
+  letter-spacing: 0.04em;
+
+  background-color: $bg-color-primary;
+  color: $color-accent;
+  border: 2px solid $color-accent;
+  border-radius: 30px;
+
+  &:hover,
+  &:focus {
+    color: $bg-color-primary;
+    background-color: $color-accent;
+    box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+    scale: 1.05;
+    transition: 500ms;
+  }
+}
+
+.btn2 {
+  border-radius: 50%;
+  background-color: $bg-color-primary;
+  color: $color-accent;
+  border: 2px solid $color-accent;
+  width: 48px;
+  height: 48px;
+
+  background-image: url(../../shared/images/DiaryPage/cross1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 15px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+    background-image: url(../../shared/images/DiaryPage/cross.svg);
+  }
+}
+
+.productsList {
+  max-width: 600px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  overflow-y: scroll;
+  max-height: 100px;
+  padding: 10px;
+
+  @include media-query(tablet) {
+    font-size: 12px;
+    max-height: 150px;
+  }
+
+  @include media-query(desktop) {
+  }
+}
+
+.productsList::-webkit-scrollbar {
+  width: 3px; /* ширина всей полосы прокрутки */
+}
+
+.productsList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.productsList::-webkit-scrollbar-thumb {
+  background: #939393;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.productsList::-webkit-scrollbar-thumb:hover {
+  background: $color-accent;
+}
+
+.productsList_item {
+  padding: 2px;
+  // border: 1px solid $style-color-form;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-accent;
+    // scale: 1.1;
+  }
+}
